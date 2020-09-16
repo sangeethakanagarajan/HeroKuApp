@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Hero Ku App</string>
+    <string name="tab_text_1">Pre - Order</string>
+    <string name="tab_text_2">Click &amp; Collect</string>
+    <string name="tab_text_3">In Store</string>
+
+    <string name="item_time" formatted="false">-%s</string>
+    <string name="item_order_stock" formatted="false">(%d) %d</string>
+    <string name="shortpick">Shortpick</string>
+    <string name="pick">pick</string>
+    <string name="tab">TAB</string>
+    <string name="enter_ip">enter ip</string>
+    <string name="scan_printer_s_qr_code_or">Scan Printer\'s QR code or</string>
+    <string name="text_zero">0</string>
+    <string name="text_two">2</string>
+</resources>

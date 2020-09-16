@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?actionBarSize"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerVertical="true"
+                android:text="@string/pick"
+                android:textColor="@color/colorIcon"
+                android:textSize="@dimen/text_size_large" />
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_xlarge"
+        android:text="time"
+        android:textColor="@color/colorTextRed"
+        android:textSize="@dimen/text_size_large"
+        app:layout_constraintEnd_toStartOf="@+id/text_web_orderid"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/text_web_orderid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_xlarge"
+        android:text="EEEE56565TY"
+        android:textColor="@color/colorTextBlack"
+        android:textSize="@dimen/text_size_large"
+        app:layout_constraintEnd_toStartOf="@+id/text_basket"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/text_time"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <TextView
+        android:id="@+id/text_basket"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_xlarge"
+        android:text="bkt"
+        android:textColor="@color/colorTextGrey"
+        android:textSize="@dimen/text_size_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/text_web_orderid"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_order_detail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_width_height_match_parent"
+        android:layout_marginTop="@dimen/margin_small"
+        android:scrollbars="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_web_orderid"
+        tools:ignore="UnusedAttribute"
+        tools:listitem="@android:layout/activity_list_item" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/guideline_end" />
+
+    <info.androidhive.fontawesome.FontTextView
+        android:id="@+id/img_printer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_xlarge"
+        android:text="@string/fa_print_solid"
+        android:textColor="@color/colorIconGrey"
+        android:textSize="@dimen/icon_size"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:solid_icon="true" />
+
+    <info.androidhive.fontawesome.FontTextView
+        android:id="@+id/img_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_xlarge"
+        android:text="@string/fa_circle"
+        android:textColor="@color/colorIconGrey"
+        android:textSize="@dimen/icon_size"
+        app:layout_constraintLeft_toRightOf="@+id/img_printer"
+        app:layout_constraintTop_toTopOf="@+id/guideline"
+        app:solid_icon="true" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/shortpick"
+        android:textSize="@dimen/text_size_large"
+        app:layout_constraintBaseline_toBaselineOf="@+id/img_printer"
+        app:layout_constraintRight_toLeftOf="@+id/btn_tab" />
+
+    <Button
+        android:id="@+id/btn_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/margin_xlarge"
+        android:text="@string/tab"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

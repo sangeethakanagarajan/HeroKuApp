@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menuAbout"
+        android:icon="@android:drawable/ic_menu_add"
+        android:title="Network"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menuSettings"
+        android:icon="@android:drawable/ic_lock_idle_low_battery"
+        android:title="Battery"
+        app:showAsAction="always" />
+</menu>
